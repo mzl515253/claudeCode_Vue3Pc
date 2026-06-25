@@ -20,7 +20,7 @@
       class="sidebar-menu"
     >
       <template v-for="item in menuItems" :key="item.path">
-        <el-menu-item :index="item.path">
+        <el-menu-item :index="'/' + item.path">
           <el-icon>
             <component :is="iconMap[item.meta?.icon as string] || iconMap['Menu']" />
           </el-icon>
